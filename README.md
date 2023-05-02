@@ -6,4 +6,4 @@ docker
 
 ## how to use
 1. git clone this repo
-2. run '''docker-compose up'''
+2. run ```docker-compose up```
