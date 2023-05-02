@@ -1,0 +1,15 @@
+version: '3'
+services:
+  pocketdb:
+    build:
+      context: ./pocketbase
+    ports:
+      - '8080:8080'
+    restart: always
+    volumes:
+      - ./pocketbase/pb_data:/pb_data
+    networks:
+      - pocketbase
+
+networks:
+  pocketbase:
