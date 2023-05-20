@@ -1,2 +1,4 @@
 .dist
 .vscode
+
+/pocketbase/pb_data
