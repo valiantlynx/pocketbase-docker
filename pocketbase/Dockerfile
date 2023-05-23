@@ -10,6 +10,9 @@ RUN apk add --no-cache \
 # copy PocketBase
 COPY ./pocketbase .
 
+# set executable permissions for pocketbase
+RUN chmod +x /pocketbase
+
 EXPOSE 8080
 
 ENV PORT 8080
