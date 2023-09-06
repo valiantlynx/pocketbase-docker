@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for nameless-cloud-5581 on 2023-08-20T20:58:03+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "nameless-cloud-5581"
+primary_region = "arn"
+
+[build]
+
+# optional if you want to change the PocketBase version
+[build.args]
+  PB_VERSION="0.17.5"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 500
+    hard_limit = 550
+
+[mounts]
+  destination = "/pb/pb_data"
+  source = "pb_data"
