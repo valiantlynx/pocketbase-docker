@@ -2,7 +2,7 @@ version: '3'
 services:
   pocketdb:
     build:
-      context: ./pocketbase
+      context: ./Dockerfile
     ports:
       - '8080:8080'
     restart: always

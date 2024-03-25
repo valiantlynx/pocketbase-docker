@@ -1,16 +1,16 @@
-# fly.toml app configuration file generated for animevariant on 2023-09-22T19:38:49+02:00
+# fly.toml app configuration file generated for whalescans on 2024-03-25T21:10:05+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "animevariant"
-primary_region = "arn"
+app = 'whalescans'
+primary_region = 'arn'
 
 [build]
 
 [[mounts]]
-  source = "pb_data"
-  destination = "/pb/pb_data"
+  source = 'pb_data'
+  destination = '/pb/pb_data'
 
 [http_service]
   internal_port = 8080
@@ -18,8 +18,14 @@ primary_region = "arn"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 1
-  processes = ["app"]
+  processes = ['app']
+
   [http_service.concurrency]
-    type = "requests"
+    type = 'requests'
     hard_limit = 550
     soft_limit = 500
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
