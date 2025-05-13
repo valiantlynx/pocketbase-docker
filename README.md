@@ -1,7 +1,8 @@
 # pocketbase-docker
 allows you to setup pocketbase quickly locally or on a server
 
-##prerequisites
+## prerequisites
+
 docker
 
 ## how to use
