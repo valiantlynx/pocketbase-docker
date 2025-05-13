@@ -5,12 +5,12 @@ run-name: ${{ github.actor }} is building pocketbase-docker 🚀
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
     paths:
       - '**'
   pull_request:
     branches:
-      - 'main'
+      - 'master'
     paths:
       - '**'
   # schedule:
